@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const MultipleEffects = () => {
+const MultipleEffectsStarter = () => {
   const [value, setValue] = useState(0);
   const [secondValue, setSecondValue] = useState(0);
 
@@ -8,9 +8,10 @@ const MultipleEffects = () => {
   //   console.log('hello from first useEffect');
   // }, []);
 
-  // useEffect(() => {
-  //   console.log('hello from second useEffect');
-  // }, []);
+  useEffect(() => {
+    console.log('hello from second useEffect');
+  }, [secondValue]);
+
   return (
     <div>
       <h1>value : {value}</h1>
@@ -18,10 +19,12 @@ const MultipleEffects = () => {
         value
       </button>
       <h1>second value : {secondValue}</h1>
-      <button className='btn' onClick={() => setSecondValue(secondValue + 1)}>
+
+      {/* will not work as it just updates a value rather than works with React Virtual DOM? */}
+      <button className='btn' onClick={() => secondValue + 1}> 
         second value
       </button>
     </div>
   );
 };
-export default MultipleEffects;
+export default MultipleEffectsStarter;
