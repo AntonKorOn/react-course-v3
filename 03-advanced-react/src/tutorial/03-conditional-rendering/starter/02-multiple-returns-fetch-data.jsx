@@ -20,7 +20,7 @@ const MultipleReturnsFetchData = () => {
         const data = await response.json();
         setUser(data);
       } catch (error) {
-        // fetch will not return error (400... 500... will not be errors; to check for those you need to user response.ok (ok is inside property of response))
+        // fetch will not return error (400... 500... will not be errors; to check for those you need to use response.ok (ok is inside property of response))
         // with axios it will catch
         setIsError(true);
         console.log(error);
@@ -42,7 +42,7 @@ const MultipleReturnsFetchData = () => {
     return <h2>There was an error...</h2>;
   }
 
-  const { avatar_url, name, company, bio } = user;
+  const { avatar_url, name, company, bio } = user; // it needs to be before the last return, otherwise it will be empty
 
   return (
     <div>

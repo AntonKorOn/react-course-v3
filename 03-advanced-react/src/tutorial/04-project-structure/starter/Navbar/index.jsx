@@ -1,0 +1,1 @@
+export { default } from "./Navbar" // smart way to do so if there are a lot of files (and I presume only one default inside the folder)

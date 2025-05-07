@@ -828,8 +828,8 @@ const MultipleReturnsFetchData = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const resp = await fetch(url);
-        const user = await resp.json();
+        const resp = await fetch(url); // return promise???
+        const user = await resp.json(); // convert succesfull promise response into json
         // console.log(user);
         setUser(user);
       } catch (error) {
