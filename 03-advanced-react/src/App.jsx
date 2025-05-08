@@ -1,21 +1,21 @@
-// import Starter from "./tutorial/03-conditional-rendering/starter/07-user-challenge";
-// import Final from "./tutorial/03-conditional-rendering/final/07-user-challenge";
+import Starter from "./tutorial/05-leverage-javascript/starter/List";
+import Final from "./tutorial/03-conditional-rendering/final/07-user-challenge";
 
-import Navbar from "./tutorial/04-project-structure/starter/Navbar";
+// import Navbar from "./tutorial/04-project-structure/starter/Navbar";
 // import About from "./tutorial/04-project-structure/starter/Pages/About";
 // import Home from "./tutorial/04-project-structure/starter/Pages/Home";
-import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
+// import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
 
 function App() {
   return (
     <div className="container">
       <h2>Advanced React</h2>
       <h2>Starter</h2>
-      {/* <Starter /> */}
+      <Starter />
 
-      <Navbar />
+      {/* <Navbar />
       <Home />
-      <About />
+      <About /> */}
 
       <br />
       <br />
